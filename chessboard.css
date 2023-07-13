@@ -1,0 +1,55 @@
+body{
+    padding-top: 50px;
+    background-color: rgb(0, 0, 0);
+}
+
+.board{
+    display: flex;
+    justify-content: center;
+}
+
+.border{
+    display:inline-block;
+    box-shadow: 0 0 100px rgba(255, 254, 254, 0.5);
+}       
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(8 , 50px);
+    grid-template-rows: repeat(8 , 50px);
+}
+.wsquare{
+    background-color: rgb(155, 152, 152);
+}
+
+.bsquare{
+    background-color: rgb(4, 83, 62);
+}
+
+.piece{
+    margin: 5px;
+}
+.piece:hover{
+    opacity: 0.6;
+    cursor: grab;
+}
+.piece:active{
+    transform: scale(1.8);
+    cursor: grabbing;
+}
+
+@media screen and (min-width:300px) and (max-width:580px) {
+
+.row{
+    display: grid;
+    grid-template-columns: repeat(8 , 40px);
+    grid-template-rows: repeat(8 , 40px);
+}
+
+.piece{
+    margin: 5px;
+    height: 30px;
+    width: 30px;
+    object-position: center;
+}
+}
